@@ -34,13 +34,14 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(to bottom, rgb(0 0 0 / 35%), rgb(0 0 0 / 75%));
+  background: linear-gradient(to bottom, rgb(0 0 0 / 50%), rgb(0 0 0 / 80%));
 }
 
 .hero .hero-content {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  overflow-wrap: break-word;
 }
 
 .hero h1 {
@@ -48,6 +49,8 @@
   font-size: clamp(2.5rem, 7vw, 5rem);
   line-height: 1.05;
   color: inherit;
+  text-wrap: balance;
+  text-shadow: 0 2px 12px rgb(0 0 0 / 30%);
 }
 
 .hero .hero-content p {
