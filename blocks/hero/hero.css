@@ -5,15 +5,43 @@
 
 .hero {
   position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   padding: 40px 24px;
-  min-height: 300px;
+  min-height: 400px;
+  color: var(--background-color);
+  background:
+    radial-gradient(circle at 80% 20%, rgb(255 255 255 / 0.15), transparent 50%),
+    linear-gradient(135deg, var(--dark-color), #1b1f2a);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(to top, rgb(0 0 0 / 0.7), rgb(0 0 0 / 0) 60%);
+}
+
+.hero h1,
+.hero p {
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1 {
   max-width: 1200px;
-  margin-left: auto;
+  margin-left: 0;
   margin-right: auto;
   color: var(--background-color);
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-xl);
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: left;
 }
 
 .hero picture {
@@ -33,5 +61,10 @@
 @media (width >= 900px) {
   .hero {
     padding: 40px 32px;
+    min-height: 500px;
+  }
+
+  .hero h1 {
+    font-size: var(--heading-font-size-xxl);
   }
 }
