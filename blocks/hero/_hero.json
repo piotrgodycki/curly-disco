@@ -37,7 +37,7 @@
         {
           "component": "richtext",
           "name": "text",
-          "value": "",
+          "value": "<p>TEST 12</p>",
           "label": "Text",
           "valueType": "string"
         }
